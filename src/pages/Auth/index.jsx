@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 import SideImage from '../../assets/SideImage.svg';
 import './style.css';
 
-export function Login() {
+export function Auth() {
 	return (
 		<section>
 			<div className="left-div">
@@ -13,10 +13,9 @@ export function Login() {
 					<Link to="/"> {`<-`} Voltar</Link>
 				</nav>
 
-				<div className='outlet-div'>
-					<h1>Faça o login</h1>
+				<div className="outlet-div">
+					<Outlet />
 				</div>
-				<Outlet />
 			</div>
 		</section>
 	);

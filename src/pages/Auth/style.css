@@ -7,13 +7,21 @@ section {
 .left-div {
 	flex: 5;
 	width: 100%;
-	background: red;
 	overflow: hidden;
 }
 
 .right-div {
-	padding: 80px;
+	padding: 60px 80px;
 	flex: 6;
 	width: 100%;
 }
 
+.nav-button {
+	color: #8692a6;
+}
+
+.outlet-div {
+	width: 440px;
+	margin: auto;
+	margin-top: 50px;
+}

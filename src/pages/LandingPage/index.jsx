@@ -11,8 +11,8 @@ export function LandingPage() {
 					<img src={''} alt="Website Logo" />
 					<div className="nav-buttons-div">
 						<Link to={'/'}>Home</Link>
-						<Link to={'/cadastro'}>Cadastro</Link>
-						<Link to={'/login'}>Login</Link>
+						<Link to={'/auth/signup'}>Cadastro</Link>
+						<Link to={'/auth/login'}>Login</Link>
 					</div>
 				</nav>
 				<div className="landing-page-div">
