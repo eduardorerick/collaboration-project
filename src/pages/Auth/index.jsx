@@ -4,16 +4,16 @@ import './style.css';
 
 export function Auth() {
 	return (
-		<section>
-			<div className="left-div">
+		<section className='auth-section'>
+			<div className="auth-left-div">
 				<img src={SideImage} alt="Side Image" style={{ width: '100%' }} />
 			</div>
-			<div className="right-div">
+			<div className="auth-right-div">
 				<nav className="nav-button">
 					<Link to="/"> {`<-`} Voltar</Link>
 				</nav>
 
-				<div className="outlet-div">
+				<div className="auth-outlet-div">
 					<Outlet />
 				</div>
 			</div>

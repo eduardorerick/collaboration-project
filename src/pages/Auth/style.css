@@ -1,26 +1,26 @@
-section {
+.auth-section {
 	display: flex;
 	width: 100vw;
 	max-height: 100vh;
 }
 
-.left-div {
+.auth-left-div {
 	flex: 5;
 	width: 100%;
 	overflow: hidden;
 }
 
-.right-div {
+.auth-right-div {
 	padding: 60px 80px;
 	flex: 6;
 	width: 100%;
 }
 
-.nav-button {
+.auth-nav-button {
 	color: #8692a6;
 }
 
-.outlet-div {
+.auth-outlet-div {
 	width: 440px;
 	margin: auto;
 	margin-top: 50px;
