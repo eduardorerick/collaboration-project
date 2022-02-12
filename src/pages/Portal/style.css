@@ -1,0 +1,14 @@
+.portal-section {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+.left-div {
+	flex: 1;
+}
+
+.right-div {
+	background: #f1f1f1;
+	flex: 4;
+}
