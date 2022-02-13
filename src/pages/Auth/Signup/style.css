@@ -1,0 +1,37 @@
+.signup-titulo{
+    position: relative;
+    
+    width: 426px;
+    height: 172px;
+    left: 150px;
+    top: 0px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.signup-subtitulo{
+    position: relative;
+
+    width: 142px;
+    height: 19px;
+    left: 793px;
+    top: 336px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    
+    color: #696F79;
+}
