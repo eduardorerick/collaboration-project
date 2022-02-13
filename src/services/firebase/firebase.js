@@ -24,15 +24,13 @@ export function useCreateUser() {
 		createUserWithEmailAndPassword(auth, email, password)
 			.then(async (userCredential) => {
 				const user = userCredential.user;
-				const userCollection = collection(db, 'users');
-				const docRef = await setDoc(doc(db, 'users', user.uid), {
+				await setDoc(doc(db, 'users', user.uid), {
 					email: user.email,
 					id: user.uid
 				});
 				enqueueSnackbar('Usuário criado com sucesso!', { variant: 'success' });
 			})
 			.catch((error) => {
-				const errorCode = error.code;
 				enqueueSnackbar(error.message, { variant: 'error' });
 				// ..
 			});
@@ -49,8 +47,6 @@ export function useLogin() {
 				// ...
 			})
 			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
 				enqueueSnackbar(error.message, { variant: 'error' });
 			});
 }

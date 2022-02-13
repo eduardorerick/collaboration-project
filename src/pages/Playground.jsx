@@ -1,5 +1,4 @@
 import { useCreateUser, useLogin } from '../services/firebase/firebase';
-import { useSnackbar } from 'notistack';
 
 export function Playground() {
 	const createUser = useCreateUser();
