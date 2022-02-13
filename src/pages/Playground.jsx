@@ -1,8 +1,9 @@
-import { useCreateUser, useLogin } from '../services/firebase/firebase';
+import { useCreateNewTask, useCreateUser, useLogin } from '../services/firebase/firebase';
 
 export function Playground() {
 	const createUser = useCreateUser();
 	const userLogin = useLogin();
+	const createNewTask = useCreateNewTask();
 	function handleSignup() {
 		try {
 			createUser('eduardorerick@gmail.com', '123123');
@@ -17,11 +18,19 @@ export function Playground() {
 			console.log(err);
 		}
 	}
+	function handleNewTask() {
+		try {
+			createNewTask('Nova tarefa');
+		} catch (err) {
+			console.log(err);
+		}
+	}
 	return (
 		<div>
 			<h1>Playground</h1>
 			<button onClick={handleSignup}>Cadastrar</button>
 			<button onClick={handleLogin}>Login</button>
+			<button onClick={handleNewTask}>Nova task</button>
 		</div>
 	);
 }

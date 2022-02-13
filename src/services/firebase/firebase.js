@@ -1,7 +1,8 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, doc, setDoc, addDoc, collection } from 'firebase/firestore';
 import { useSnackbar } from 'notistack';
+import { useAuth } from '../../context/Auth';
 
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -49,4 +50,15 @@ export function useLogin() {
 			.catch((error) => {
 				enqueueSnackbar(error.message, { variant: 'error' });
 			});
+}
+
+export function useCreateNewTask() {
+	const { user } = useAuth();
+
+	return async (title) => {
+		await addDoc(collection(db, `users/${user.uid}/tasks`), {
+			title: title,
+			isCompleted: false
+		});
+	};
 }
