@@ -9,6 +9,11 @@ export function Playground() {
 
 	const [ tasks, setTasks ] = useState([]);
 
+	useEffect(() => setTasks(taskList), []);
+
+	console.log(taskList);
+	console.log(tasks);
+
 	function handleSignup() {
 		try {
 			createUser('eduardorerick@gmail.com', '123123');
@@ -32,7 +37,6 @@ export function Playground() {
 	}
 	function handleSeeTask() {
 		try {
-			const list = taskList.then((res) => setTasks(res));
 		} catch (err) {
 			console.log(err);
 		}

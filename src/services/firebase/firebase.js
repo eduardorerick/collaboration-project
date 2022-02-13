@@ -63,13 +63,15 @@ export function useCreateNewTask() {
 	};
 }
 
-export async function useTasks() {
+export function useTasks() {
 	const { user } = useAuth();
-	let docs = [];
+	const docs = [];
+
 	const q = query(collection(db, `users/${user.uid}/tasks`));
-	const querySnapshot = await getDocs(q);
-	querySnapshot.forEach((doc) => {
-		docs.push(doc.data());
+	const querySnapshot = onSnapshot(q, (snapshot) => {
+		snapshot.forEach((doc) => {
+			docs.push(doc.data());
+		});
 	});
 
 	return docs;
