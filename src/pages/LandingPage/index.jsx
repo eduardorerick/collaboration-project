@@ -2,7 +2,6 @@ import { Template } from '../../components/Template';
 import './style.css';
 import { Link } from 'react-router-dom';
 import HeroImage from '../../assets/landingPageImg.svg';
-import { useAuth } from '../../context/Auth';
 
 export function LandingPage() {
 	return (
