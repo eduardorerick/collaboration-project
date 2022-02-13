@@ -6,12 +6,14 @@ import { Signup } from '../pages/Auth/Signup';
 import { TaskList } from '../pages/Portal/TaskList';
 import { UserSearch } from '../pages/Portal/UserSearch';
 import { Portal } from '../pages/Portal';
+import { Playground } from '../pages/Playground';
 
 export function Routes() {
 	return (
 		<BrowserRouter>
 			<DomRoutes>
 				<Route path="/" exact element={<LandingPage />} />
+				<Route path="/playground" exact element={<Playground />} />
 				<Route path="/auth" exact element={<Auth />}>
 					<Route path="login" exact element={<Login />} />
 					<Route path="signup" exact element={<Signup />} />
