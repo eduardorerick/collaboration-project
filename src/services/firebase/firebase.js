@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore, doc, setDoc, addDoc, collection } from 'firebase/firestore';
+import { getFirestore, doc, setDoc, addDoc, collection, onSnapshot, query, getDocs } from 'firebase/firestore';
 import { useSnackbar } from 'notistack';
 import { useAuth } from '../../context/Auth';
 
@@ -61,4 +61,16 @@ export function useCreateNewTask() {
 			isCompleted: false
 		});
 	};
+}
+
+export async function useTasks() {
+	const { user } = useAuth();
+	let docs = [];
+	const q = query(collection(db, `users/${user.uid}/tasks`));
+	const querySnapshot = await getDocs(q);
+	querySnapshot.forEach((doc) => {
+		docs.push(doc.data());
+	});
+
+	return docs;
 }
