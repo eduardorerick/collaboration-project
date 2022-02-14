@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore, doc, setDoc, addDoc, collection, onSnapshot, query, getDocs } from 'firebase/firestore';
+import { getFirestore, doc, setDoc, addDoc, collection, onSnapshot, query } from 'firebase/firestore';
 import { useSnackbar } from 'notistack';
 import { useAuth } from '../../context/Auth';
 
@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 export const firebaseApp = initializeApp(firebaseConfig);
 
-const auth = getAuth(firebaseApp);
+export const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 
 export function useCreateUser() {
@@ -68,7 +68,7 @@ export function useTasks() {
 	const docs = [];
 
 	const q = query(collection(db, `users/${user.uid}/tasks`));
-	const querySnapshot = onSnapshot(q, (snapshot) => {
+	onSnapshot(q, (snapshot) => {
 		snapshot.forEach((doc) => {
 			docs.push(doc.data());
 		});
