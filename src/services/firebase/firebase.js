@@ -1,7 +1,8 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, doc, setDoc, addDoc, collection, onSnapshot, query } from 'firebase/firestore';
 import { useSnackbar } from 'notistack';
+import { useAuth } from '../../context/Auth';
 
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -14,7 +15,7 @@ const firebaseConfig = {
 
 export const firebaseApp = initializeApp(firebaseConfig);
 
-const auth = getAuth(firebaseApp);
+export const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 
 export function useCreateUser() {
@@ -49,4 +50,29 @@ export function useLogin() {
 			.catch((error) => {
 				enqueueSnackbar(error.message, { variant: 'error' });
 			});
+}
+
+export function useCreateNewTask() {
+	const { user } = useAuth();
+
+	return async (title) => {
+		await addDoc(collection(db, `users/${user.uid}/tasks`), {
+			title: title,
+			isCompleted: false
+		});
+	};
+}
+
+export function useTasks() {
+	const { user } = useAuth();
+	const docs = [];
+
+	const q = query(collection(db, `users/${user.uid}/tasks`));
+	onSnapshot(q, (snapshot) => {
+		snapshot.forEach((doc) => {
+			docs.push(doc.data());
+		});
+	});
+
+	return docs;
 }
