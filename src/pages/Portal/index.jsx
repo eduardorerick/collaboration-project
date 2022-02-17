@@ -4,7 +4,7 @@ import './style.css';
 export function Portal() {
 	return (
 		<section className='portal-section'>
-			<div className="left-div">Todo ~</div>
+			<div className="left-div">Bem vindo, Usuário!</div>
 
 			<div className="right-div">
 				<Outlet />
