@@ -1,4 +1,11 @@
-
-.conteudo h1 {
-margin-bottom: 32px;
+.tasklist-conteudo {
+	width: 790px;
+	margin: auto;
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+.tasklist-conteudo h1 {
+	margin-bottom: 32px;
+	font-size: 34px;
 }

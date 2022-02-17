@@ -7,9 +7,9 @@ export const AuthProvider = ({ children }) => {
 
 	const userData = JSON.parse(localStorage.getItem('user')) || undefined;
 
-	if (userData) {
-		setUser(userData);
-	}
+	// if (userData) {
+	// 	setUser(userData);
+	// }
 
 	return <AuthContext.Provider value={{ user, setUser }}>{children}</AuthContext.Provider>;
 };

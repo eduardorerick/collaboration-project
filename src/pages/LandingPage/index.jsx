@@ -6,7 +6,6 @@ import { useAuth } from '../../context/Auth';
 
 export function LandingPage() {
 	const { user, setUser } = useAuth();
-	console.log(user);
 	return (
 		<section className="landing-section">
 			<Template>
