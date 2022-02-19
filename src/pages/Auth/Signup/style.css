@@ -1,11 +1,4 @@
 .signup-titulo{
-    position: relative;
-    
-    width: 426px;
-    height: 172px;
-    left: 150px;
-    top: 0px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
@@ -18,13 +11,6 @@
 }
 
 .signup-subtitulo{
-    position: relative;
-
-    width: 142px;
-    height: 19px;
-    left: 793px;
-    top: 336px;
-
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
@@ -34,4 +20,31 @@
     align-items: center;
     
     color: #696F79;
+}
+
+.signup-inputBox{
+    width: 426px;
+
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 23px;
+
+    border: 1px solid #8692A6;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.signup-inputBox::placeholder{
+        
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #8692A6;
 }
