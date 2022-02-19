@@ -5,13 +5,20 @@ export function Signup() {
 		<div className="signup-div">
 			<section className="signup-titulo">Registrar Conta</section>
 			<section className="signup-subtitulo">Registro de e-mail</section>
-			<input placeholder="Insida seu e-mail" className="signup-inputBox" />
+			<div className="signup-div-input">
+				<input className= "signup-input" type="teste" placeholder="insira o e-mail aqui!" />
+			</div>
 			<section className="signup-subtitulo">Senha</section>
-			<input placeholder="Escolha uma senha" className="signup-inputBox" />
+			<div className="signup-div-input">
+				<input className= "signup-input" type="teste" placeholder="insira o e-mail aqui!" />
+				<div className="signup-btn">
+					show
+				</div>
+			</div>
 			<br></br>
 			<input type="checkbox" className="signup-boxSelect" />Eu concordo com os termos e condições
 			<br></br>
 			<button className="signup-button">Registrar conta</button>
-		</div>
+			</div>
 	);
 }

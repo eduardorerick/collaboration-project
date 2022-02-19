@@ -48,3 +48,18 @@
 
     color: #8692A6;
 }
+
+.signup-div-input{
+    border: 1px solid #8692A6;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 23px;
+    align-items: center;
+    width: 426px;
+    height: 64px;
+}
+.signup-input{
+    background: none;
+    border: none;
+}
