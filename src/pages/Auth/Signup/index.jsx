@@ -1,13 +1,27 @@
 import './style.css';
 
 export function Signup() {
-	return <div className="signup-div">
-		<section className="signup-titulo">Registrar Conta</section>
-		<section className="signup-subtitulo">Registro de e-mail</section>
-		<section className="signup-inputBox">Insira o e-mail aqui</section>
-		<section className="signup-subtitulo">Senha</section>
-		<section className="signup-imputBox">Insira a senha aqui</section>
-		<section className="signup-boxSelect">Eu concordo com os termos e condições</section>
-		<section className="signup-button">Registrar conta</section>
-	</div>;
+	return (
+		<div className="signup-div">
+			<section className="signup-titulo">Registrar Conta</section>
+			<section className="signup-sublinhar"> </section>
+			<br></br>
+			<section className="signup-subtitulo">Registro de e-mail</section>
+			<div className="signup-div-input">
+				<input className= "signup-input" type="teste" placeholder="Insira o e-mail aqui." />
+			</div>
+			<br></br>
+			<section className="signup-subtitulo">Insira uma senha</section>
+			<div className="signup-div-input">
+				<input className= "signup-input" type="teste" placeholder="Escolha uma senha." />
+				<div className="signup-btn">
+					show
+				</div>
+			</div>
+			<br></br>
+			<input type="checkbox" className="signup-boxSelect" />Eu concordo com os termos e condições
+			<br></br><br></br>
+			<button className="signup-button">Registrar conta</button>
+			</div>
+	);
 }
