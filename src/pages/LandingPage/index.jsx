@@ -2,10 +2,8 @@ import { Template } from '../../components/Template';
 import './style.css';
 import { Link } from 'react-router-dom';
 import HeroImage from '../../assets/landingPageImg.svg';
-import { useAuth } from '../../context/Auth';
 
 export function LandingPage() {
-	const { user, setUser } = useAuth();
 	return (
 		<section className="landing-section">
 			<Template>
@@ -25,7 +23,7 @@ export function LandingPage() {
 						</p>
 					</div>
 					<div className="landing-image-div">
-						<img src={HeroImage} alt="Hero Image" style={{ width: '100%' }} />
+						<img src={HeroImage} alt="Landing Page Logo" style={{ width: '100%' }} />
 					</div>
 				</div>
 			</Template>
