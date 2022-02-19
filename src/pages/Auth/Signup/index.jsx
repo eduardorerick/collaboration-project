@@ -1,4 +1,5 @@
 import './style.css';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 export function Signup() {
 	return (
@@ -15,7 +16,7 @@ export function Signup() {
 			<div className="signup-div-input">
 				<input className= "signup-input" type="teste" placeholder="Escolha uma senha." />
 				<div className="signup-btn">
-					show
+					<VisibilityOffIcon/>
 				</div>
 			</div>
 			<br></br>
