@@ -3,6 +3,8 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { auth, firebaseApp, useCreateNewTask, useCreateUser, useLogin } from '../services/firebase/firebase';
 import { useAuth } from '../context/Auth';
+import { Box, Button } from '@mui/material';
+import { AddAPhoto } from '@mui/icons-material';
 
 export function Playground() {
 	const contextUser = useAuth();
@@ -13,6 +15,7 @@ export function Playground() {
 	const [ value ] = useCollectionData(collection(getFirestore(firebaseApp), `users/${contextUser.user.uid}/tasks`), {
 		snapshotListenOptions: { includeMetadataChanges: true }
 	});
+	console.log(value);
 
 	function handleSignup() {
 		try {
@@ -42,7 +45,11 @@ export function Playground() {
 			<button onClick={() => signInWithGoogle()}>Cadastrar com google</button>
 			<button onClick={handleLogin}>Login</button>
 			<button onClick={handleNewTask}>Nova task</button>
-			{value?.map((task, idx) => <h1 key={idx}>{task.title}</h1>)}
+			<Box>
+				<Button variant="outlined" sx={{ mt: '10px', ml: '10px' }}>
+					Teste <AddAPhoto />
+				</Button>
+			</Box>
 		</div>
 	);
 }
