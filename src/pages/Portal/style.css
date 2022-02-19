@@ -6,9 +6,15 @@
 
 .left-div {
 	flex: 1;
+	font-size: 32px;
+	margin-top: 82px;
+	margin-left: 46px;
 }
+
 
 .right-div {
 	background: #f1f1f1;
 	flex: 4;
 }
+
+
