@@ -18,7 +18,7 @@
     line-height: 19px;
     display: flex;
     align-items: center;
-    
+
     color: #696F79;
 }
 
@@ -62,4 +62,25 @@
 .signup-input{
     background: none;
     border: none;
+}
+
+.signup-button{
+    width: 426px;
+    height: 46px;
+
+    background-color: #1565d8;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    border-radius: 6px;
+
 }
