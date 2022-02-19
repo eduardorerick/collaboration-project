@@ -10,8 +10,7 @@ export function Signup() {
 			<div className="signup-div-input">
 				<input className= "signup-input" type="teste" placeholder="Insira o e-mail aqui." />
 			</div>
-			<br>
-			</br>
+			<br></br>
 			<section className="signup-subtitulo">Insira uma senha</section>
 			<div className="signup-div-input">
 				<input className= "signup-input" type="teste" placeholder="Escolha uma senha." />
@@ -21,7 +20,7 @@ export function Signup() {
 			</div>
 			<br></br>
 			<input type="checkbox" className="signup-boxSelect" />Eu concordo com os termos e condições
-			<br></br>
+			<br></br><br></br>
 			<button className="signup-button">Registrar conta</button>
 			</div>
 	);
