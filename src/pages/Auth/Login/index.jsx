@@ -1,7 +1,6 @@
 import './style.css';
 import { useState } from 'react';
 import { CustomInput } from '../../../components/CustomInput';
-import { useNavigate } from 'react-router-dom';
 import { useLogin } from '../../../services/firebase/firebase';
 
 export function Login() {

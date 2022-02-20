@@ -1,9 +1,9 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
-	const userData = JSON.parse(localStorage.getItem('user')) || {};
+	const userData = useMemo(() => JSON.parse(localStorage.getItem('user')), []);
 	const [ user, setUser ] = useState(userData);
 
 	useEffect(
