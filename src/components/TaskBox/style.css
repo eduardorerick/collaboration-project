@@ -1,0 +1,40 @@
+
+.tasklist-tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 368px;
+  height: 58px;
+  background-color: #FFFFFF;
+  color:#0059F1;
+  padding: 22px 20px;
+  border:1px solid #0059F1;
+  border-radius: 5px;
+  margin-top:32px;
+}
+
+.tasklist-tarefa button {
+  border:none;
+  background: transparent;
+  font-size: 18px;
+;
+
+}
+.tasklist-tarefa .btnação {
+  display: flex;
+  gap:8px;
+}
+
+
+.tasklist-tarefa.completa span {
+  font-size: 18px;
+  text-decoration-line: line-through;
+}
+
+.tasklist-tarefa.completa button {
+  border: none;
+  background: transparent;
+  font-size:18px;
+  padding: 21px 21px;
+}
+
