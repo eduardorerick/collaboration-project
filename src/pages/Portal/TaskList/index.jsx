@@ -1,3 +1,4 @@
+import { TaskBox } from '../../../components/TaskBox';
 import './style.css';
 
 export function TaskList() {
@@ -10,26 +11,13 @@ export function TaskList() {
 					<button>+</button>
 				</div>
 				<div>
-					<div className="tasklist-tarefa">
-						<span className="tarefa1">Título da tarefa</span>
-							<div className="btnação">
-								<button>✔</button>
-								<button>✖</button>
-						
-							</div>
-
-					</div>
-				
+					<TaskBox title="Teste 2" />
 				</div>
 			</div>
 
 			<div className="tasklist-tarefaconcluida">
 				<h1>Tarefas completas</h1>
-				<div className='tasklist-tarefa completa'>
-					<span>Título da tarefa</span>
-					<div className='removertarefa'>
-						<button>✖</button></div>
-					</div>
+				<TaskBox title="Teste" isCompleted />
 			</div>
 		</section>
 	);
