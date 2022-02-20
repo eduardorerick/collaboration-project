@@ -81,3 +81,14 @@ export function useTasks() {
 
 	return docs;
 }
+
+export function useSignOut() {
+	const { setUser } = useAuth();
+	const navigate = useNavigate();
+
+	return () => {
+		setUser({});
+		localStorage.clear();
+		navigate('/auth/login');
+	};
+}
