@@ -1,6 +1,6 @@
 .signup-div{
     
-    margin-top: 40%;
+    margin-top: 25%;
     align-items: center;
     justify-content: center;
 }
@@ -94,4 +94,10 @@
 
     border-radius: 6px;
 
+}
+
+.signup-olhar {
+    background: none;
+    background-color: none;
+    border: none;
 }
