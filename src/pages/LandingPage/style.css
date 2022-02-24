@@ -14,26 +14,29 @@
 
 .landing-page-div {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
-	margin-top: 100px;
+	margin-top: 30px;
 	align-items: center;
 	justify-content: center;
 }
 
 .landing-text-div {
+	width: 460px;
+	text-align: center;
 	flex: 2;
 }
 .landing-text-div p {
 	padding-top: 12px;
 	font-weight: 300;
-	font-size: 21px;
+	font-size: 1rem;
 	color: #7d7987;
 }
 
 .landing-text-div h1 {
-	font-size: 48px;
+	font-size: 2rem;
 }
 
 .landing-image-div {
-	flex: 2;
+	width: 580px;
 }

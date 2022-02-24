@@ -3,6 +3,8 @@ html {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	background: #292c3f;
+	color: #ffffff;
 
 	font-family: 'Inter', sans-serif;
 }
@@ -10,4 +12,13 @@ html {
 * a {
 	text-decoration: none;
 	color: inherit;
+	transition: opacity 0.2s ease;
+}
+
+* a:hover {
+	opacity: 0.8;
+}
+
+* input::placeholder {
+	color: #ffffff;
 }
