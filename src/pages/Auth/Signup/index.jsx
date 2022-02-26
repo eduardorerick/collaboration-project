@@ -22,8 +22,9 @@ export function Signup() {
 		<div className="signup-div">
 			<section className="signup-titulo">Registrar Conta</section>
 			<section className="signup-sublinhar"> </section>
+			<br /><br />
+			<section className="signup-subtitulo">Endereço de e-mail</section>
 			<br />
-			<section className="signup-subtitulo">Registro de e-mail</section>
 			<div className="signup-div-input">
 				<input
 					value={email}
@@ -34,7 +35,8 @@ export function Signup() {
 				/>
 			</div>
 			<br />
-			<section className="signup-subtitulo">Insira uma senha</section>
+			<section className="signup-subtitulo">Senha</section>
+			<br />
 			<div className="signup-div-input">
 				<input
 					value={pass}
@@ -48,16 +50,12 @@ export function Signup() {
 					{!isPasswordVisible && <Visibility />}
 				</button>
 			</div>
-			<br />
-			<input type="checkbox" className="signup-boxSelect" />Eu concordo com os termos e condições
-			<br />
-			<br />
 			<button onClick={cadastrar} className="signup-button">
 				Registrar conta
 			</button>
-			<button className="signup-button">
+			{/*<button className="signup-button">
 				Registrar com Google<GoogleIcon />
-			</button>
+			</button>*/}
 		</div>
 	);
 }

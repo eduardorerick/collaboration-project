@@ -1,7 +1,7 @@
 .signup-div {
 	margin-top: 25%;
 	align-items: center;
-	justify-content: center;
+	justify-content: left;
 }
 
 .signup-titulo {
@@ -67,6 +67,7 @@
 	align-items: center;
 	width: 426px;
 	height: 64px;
+	margin-bottom: 5px;
 }
 .signup-input {
 	background: none;
@@ -74,8 +75,11 @@
 }
 
 .signup-button {
+	margin-top: 60px;
 	width: 426px;
-	height: 46px;
+	height: 64px;
+	left: 793px;
+	top: 636px;
 
 	background-color: #1565d8;
 	font-family: Inter, sans-serif;
