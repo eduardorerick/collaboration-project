@@ -1,6 +1,6 @@
 import './style.css';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
-import GoogleIcon from '@mui/icons-material/Google';
+/*import GoogleIcon from '@mui/icons-material/Google';*/
 import { useState } from 'react';
 import { useCreateUser } from '../../../services/firebase/firebase';
 
@@ -22,9 +22,7 @@ export function Signup() {
 		<div className="signup-div">
 			<section className="signup-titulo">Registrar Conta</section>
 			<section className="signup-sublinhar"> </section>
-			<br /><br />
 			<section className="signup-subtitulo">Endereço de e-mail</section>
-			<br />
 			<div className="signup-div-input">
 				<input
 					value={email}
@@ -34,9 +32,7 @@ export function Signup() {
 					placeholder="Insira o e-mail aqui."
 				/>
 			</div>
-			<br />
-			<section className="signup-subtitulo">Senha</section>
-			<br />
+			<section className="signup-subtitulo-senha">Senha</section>
 			<div className="signup-div-input">
 				<input
 					value={pass}
