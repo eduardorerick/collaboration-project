@@ -17,9 +17,8 @@
   border:none;
   background: transparent;
   font-size: 18px;
-;
-
 }
+
 .tasklist-tarefa .btnação {
   display: flex;
   gap:8px;

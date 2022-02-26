@@ -74,8 +74,8 @@ export function useTasks() {
 
 	const q = query(collection(db, `users/${user.uid}/tasks`));
 	onSnapshot(q, (snapshot) => {
-		snapshot.forEach((doc) => {
-			docs.push(doc.data());
+		snapshot.forEach((docs) => {
+			docs.push(docs.data());
 		});
 	});
 
