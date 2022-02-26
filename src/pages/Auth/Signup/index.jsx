@@ -24,12 +24,12 @@ export function Signup() {
 			<br></br>
 			<section className="signup-subtitulo">Registro de e-mail</section>
 			<div className="signup-div-input">
-				<input value={email} onChange= {(evt)=> setEmail(evt.target.value)} className= "signup-input" type="email" placeholder="Insira o e-mail aqui." />
+				<input value={email} id='USER_EMAIL' onChange= {(evt)=> setEmail(evt.target.value)} className= "signup-input" type="email" placeholder="Insira o e-mail aqui." />
 			</div>
 			<br></br>
 			<section className="signup-subtitulo">Insira uma senha</section>
 			<div className="signup-div-input">
-				<input value={pass} onChange= {(evt)=> setPass(evt.target.value)} className= "signup-input" type="password" placeholder="Escolha uma senha." />
+				<input value={pass} id='USER_PASSWORD' onChange={(evt)=> setPass(evt.target.value)} className= "signup-input" type="password" placeholder="Escolha uma senha." />
 				<button id="signup-olhar" className="signup-btn">
 					<VisibilityOffIcon/>
 				</button>
