@@ -1,6 +1,6 @@
 import './style.css';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import GoogleIcon from '@mui/icons-material/Google';
+import { GoogleIcon, GitHubIcon } from '@mui/icons-material/Google';
 import { useState } from 'react';
 import { useCreateUser } from '../../../services/firebase/firebase';
 
@@ -39,6 +39,7 @@ export function Signup() {
 			<br></br><br></br>
 			<button onClick={cadastrar} className="signup-button">Registrar conta</button>
 			<button className='signup-button'>Registrar com Google<GoogleIcon/></button>
+			<button className='signup-button'>Registrar com GitHub<GitHubIcon/></button>
 		</div>
 	);
 }
