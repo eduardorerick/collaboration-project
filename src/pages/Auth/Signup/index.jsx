@@ -50,7 +50,6 @@ export function Signup() {
 					{!isPasswordVisible && <Visibility />}
 				</button>
 			</div>
-			<br /><br /><br />
 			<button onClick={cadastrar} className="signup-button">
 				Registrar conta
 			</button>
