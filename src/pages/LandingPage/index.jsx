@@ -8,11 +8,11 @@ export function LandingPage() {
 		<section className="landing-section">
 			<Template>
 				<nav className="landing-navbar">
-					<img src={''} alt="Website Logo" />
+					<img src={} alt="Website Logo" />
 					<div className="landing-nav-buttons-div">
 						<Link to={'/'}>Home</Link>
-						<Link to={'/auth/signup'}>Cadastro</Link>
 						<Link to={'/auth/login'}>Login</Link>
+						<Link to={'/auth/signup'}>Cadastro</Link>
 					</div>
 				</nav>
 				<div className="landing-page-div">

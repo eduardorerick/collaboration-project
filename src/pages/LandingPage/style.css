@@ -1,13 +1,16 @@
+
 .landing-section {
-	height: 90vh;
+	min-height: 100vh;
+	background-color:#292C3F;
 }
 .landing-navbar {
-	margin-top: 20px;
+	height: 104px;
+	padding-top: 29px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.landing-nav-buttons-div {
+.landing-nav-buttons-div { 
 	display: flex;
 	gap: 20px;
 }
@@ -19,7 +22,6 @@
 	align-items: center;
 	justify-content: center;
 }
-
 .landing-text-div {
 	flex: 2;
 }
