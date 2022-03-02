@@ -20,15 +20,13 @@ jobs:
             node:version: '14'
       - name: Install dependecies
         run: npm install
-      - name: Run Project
-        run: npm start
-      - name: Run Tests
-        run: npm test
-          
-      # - name: Install dependencies
-      #   run: npm install       
-      # - name: Cypress run
-      #   uses: cypress-io/github-action@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm start
+          wait-on: "http://localhost:3000"
+          browser: chrome
+          headless: true
 
   deploy:
     needs: cypress-tests

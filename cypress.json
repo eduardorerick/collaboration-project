@@ -1,13 +1,5 @@
 {
-    "fileServerFolder": ".",
-    "fixturesFolder": "./cypress/fixtures",
-    "integrationFolder": "./cypress/integration",
-    "modifyObstructiveCode": false,
-    "supportFile": "./cypress/support/index.js",
-    "pluginsFile": false,
-    "video": true,
-    "chromeWebSecurity": false,
-    "viewportWidth": 1920,
-    "viewportHeight": 1080
-  }
-  
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080
+}
