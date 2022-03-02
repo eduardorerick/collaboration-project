@@ -18,12 +18,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
             node:version: '14'
-        - name: Install dependecies
-          run: npm install
-        - name: Run Project
-          run: npm start
-        - name: Run Tests
-          run: npm test
+      - name: Install dependecies
+        run: npm install
+      - name: Run Project
+        run: npm start
+      - name: Run Tests
+        run: npm test
           
       # - name: Install dependencies
       #   run: npm install       
