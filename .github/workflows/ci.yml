@@ -22,7 +22,7 @@ jobs:
           build: npm run build
           start: npm start
   deploy:
-    needs: cypress-run
+    needs: cypress-tests
     # Operating system to run job on
     runs-on: ubuntu-latest
 
