@@ -11,25 +11,19 @@ on:
 
 jobs:
   cypress-tests:
+     jobs:
+  cypress-run:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node16.14.0-chrome87-ff82
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Install modules
-        run: npm install
-      - name: Run end-to-end tests on desktop viewport 🧪
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
         uses: cypress-io/github-action@v2
-        env:
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-          FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
-          FIREBASE_MESSAGING_SENDER_ID: ${{secrets.FIREBASE_MESSAGING_SENDER_ID}}
-          FIREBASE_APP_ID: ${{secrets.FIREBASE_APP_ID}}
         with:
-          command: npm test
+          build: npm run build
+          start: npm start
   deploy:
     needs: cypress-tests
     # Operating system to run job on
