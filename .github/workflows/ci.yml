@@ -10,8 +10,6 @@ on:
 
 
 jobs:
-  cypress-tests:
-     jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
