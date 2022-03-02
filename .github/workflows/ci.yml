@@ -7,21 +7,27 @@ on:
       - develop
   pull_request:
 
-
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install node
         uses: actions/setup-node@v2
         with:
-            node:version: '14'
+          node:version: "14"
       - name: Install dependecies
         run: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        env:
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
+          REACT_APP_FIREBASE_APP_ID: ${{ secrets.DEV_REACT_APP_FIREBASE_APP_ID }}
+          REACT_APP_FIREBASE_AUTH_DOMAIN: ${{ secrets.DEV_REACT_APP_FIREBASE_AUTH_DOMAIN }}
+          REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.DEV_REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
+          REACT_APP_FIREBASE_PROJECT_ID: ${{ secrets.DEV_REACT_APP_FIREBASE_PROJECT_ID }}
+          REACT_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.DEV_REACT_APP_FIREBASE_STORAGE_BUCKET }}
         with:
           start: npm start
           wait-on: "http://localhost:3000"
