@@ -31,7 +31,7 @@ export function Playground() {
 			console.log(err);
 		}
 	}
-	function handleNewTask() {
+	async function handleNewTask() {
 		try {
 			createNewTask('Nova tarefa');
 		} catch (err) {

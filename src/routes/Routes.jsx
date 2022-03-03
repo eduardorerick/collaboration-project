@@ -4,23 +4,50 @@ import { Auth } from '../pages/Auth';
 import { Login } from '../pages/Auth/Login';
 import { Signup } from '../pages/Auth/Signup';
 import { TaskList } from '../pages/Portal/TaskList';
-import { UserSearch } from '../pages/Portal/UserSearch';
+import { Profile } from '../pages/Portal/Profile';
 import { Portal } from '../pages/Portal';
 import { Playground } from '../pages/Playground';
+import { CanSee } from '../components/CanSee';
+import React from 'react';
+import { IsLogged } from '../components/isLogged';
 
 export function Routes() {
 	return (
 		<BrowserRouter>
 			<DomRoutes>
 				<Route path="/" exact element={<LandingPage />} />
-				<Route path="/playground" exact element={<Playground />} />
-				<Route path="/auth" exact element={<Auth />}>
+				<Route
+					path="/auth"
+					exact
+					element={
+						<IsLogged>
+							<Auth />
+						</IsLogged>
+					}
+				>
 					<Route path="login" exact element={<Login />} />
 					<Route path="signup" exact element={<Signup />} />
 				</Route>
-				<Route path="/portal" exact element={<Portal />}>
+				<Route
+					path="playground"
+					exact
+					element={
+						<CanSee>
+							<Playground />
+						</CanSee>
+					}
+				/>
+				<Route
+					path="/portal"
+					exact
+					element={
+						<CanSee>
+							<Portal />
+						</CanSee>
+					}
+				>
 					<Route path="tasklist" exact element={<TaskList />} />
-					<Route path="usersearch" exact element={<UserSearch />} />
+					<Route path="profile" exact element={<Profile />} />
 				</Route>
 				{/* <Route index element={<Home />} />
 					<Route path="teams" element={<Teams />}>

@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, setDoc, addDoc, collection, onSnapshot, query } from 'firebase/firestore';
 import { useSnackbar } from 'notistack';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
 
 const firebaseConfig = {
@@ -38,13 +39,17 @@ export function useCreateUser() {
 }
 
 export function useLogin() {
+	const { setUser } = useAuth();
 	const { enqueueSnackbar } = useSnackbar();
+	const navigate = useNavigate();
 
-	return (email, password) =>
+	return (email, password, path) =>
 		signInWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
 				const user = userCredential.user;
+				setUser(user);
 				localStorage.setItem('user', JSON.stringify(user));
+				navigate(path);
 				// ...
 			})
 			.catch((error) => {
@@ -69,10 +74,21 @@ export function useTasks() {
 
 	const q = query(collection(db, `users/${user.uid}/tasks`));
 	onSnapshot(q, (snapshot) => {
-		snapshot.forEach((doc) => {
-			docs.push(doc.data());
+		snapshot.forEach((docs) => {
+			docs.push(docs.data());
 		});
 	});
 
 	return docs;
+}
+
+export function useSignOut() {
+	const { setUser } = useAuth();
+	const navigate = useNavigate();
+
+	return () => {
+		setUser({});
+		localStorage.clear();
+		navigate('/auth/login');
+	};
 }
