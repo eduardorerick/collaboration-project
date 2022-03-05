@@ -1,0 +1,51 @@
+.landing-section {
+	min-height: 100vh;
+	background-color:#292C3F;
+	color: white;
+}
+.landing-navbar {
+	height: 104px;
+	padding-top: 29px;
+	display: flex;
+	justify-content: space-between;
+
+img {
+    width: 147px;
+    }
+} 
+
+.landing-nav-buttons-div { 
+	display: flex;
+	gap: 20px;
+}
+
+.landing-page-div {
+	margin:auto;
+    width: 507.28px;
+	height: 309.01px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+}
+.landing-text-div {
+    h1 {
+    height: 180,98px;
+	width: 487px;
+	font-size: 48px;
+	text-align: center;
+    }
+    
+    p {
+    margin-top: 41px;
+	font-weight: 300;
+	font-size: 21px;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 41px;
+    }
+}
+.landing-image {
+	width: 751px;
+	height: 502px;
+	margin: auto;
+}

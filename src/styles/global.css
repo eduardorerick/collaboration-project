@@ -1,13 +1,23 @@
-*,
-html {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+:root {
+	--backgroundPrimary: #292C3F;
+	--button: #1565D8;
+	--backgroundSecondary:
 
-	font-family: 'Inter', sans-serif;
+}
+*,
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 * a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+* input {
+  outline: none;
 }

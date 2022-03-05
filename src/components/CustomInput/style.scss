@@ -1,0 +1,13 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 426px;
+  color: #696f79;
+
+  input {
+    padding: 23px 23px;
+    border-radius: 6px;
+    border: 1px solid #8692a6;
+  }
+}
