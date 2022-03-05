@@ -1,12 +1,14 @@
+import { TaskBox } from '../../../components/TaskBox';
+import './style.scss';
 import { CircularProgress } from "@mui/material";
 import { useState } from "react";
-import { TaskBox } from "../../../components/TaskBox";
+
 import {
   useUpdateUserCollection,
   useCreateNewTask,
   useUserCollection,
 } from "../../../services/firebase/firebase";
-import "./style.css";
+
 
 export function TaskList() {
   const [taskTitle, setTaskTitle] = useState("");
