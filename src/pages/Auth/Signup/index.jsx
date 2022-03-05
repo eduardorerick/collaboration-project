@@ -1,6 +1,5 @@
 import "./style.css";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
-import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
 import { useCreateUser } from "../../../services/firebase/firebase";
 import { CustomInput } from "../../../components/CustomInput";
@@ -36,27 +35,6 @@ export function Signup() {
           type="email"
           placeholder="Insira o e-mail aqui."
         />
-      </div>
-      <br />
-      <section className="signup-subtitulo">Senha</section>
-      <br />
-      <div className="signup-div-input">
-        <input
-          value={pass}
-          id="USER_PASSWORD"
-          onChange={(evt) => setPass(evt.target.value)}
-          className="signup-input"
-          type={isPasswordVisible ? "text" : "password"}
-          placeholder="Escolha uma senha."
-        />
-        <button
-          id="signup-olhar"
-          className="signup-btn-password"
-          onClick={() => setIsPasswordVisible(!isPasswordVisible)}
-        >
-          {isPasswordVisible && <VisibilityOff />}
-          {!isPasswordVisible && <Visibility />}
-        </button>
       </div>
       <CustomInput
         value={pass}
