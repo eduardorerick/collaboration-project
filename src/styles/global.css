@@ -7,14 +7,17 @@
 *,
 
 html {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-
-	font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 * a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+* input {
+  outline: none;
 }

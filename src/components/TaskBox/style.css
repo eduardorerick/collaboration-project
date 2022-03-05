@@ -1,29 +1,31 @@
-
 .tasklist-tarefa {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 368px;
   height: 58px;
-  background-color: #FFFFFF;
-  color:#0059F1;
+  background-color: #ffffff;
+  color: #0059f1;
   padding: 22px 20px;
-  border:1px solid #0059F1;
+  border: 1px solid #0059f1;
   border-radius: 5px;
-  margin-top:32px;
+  margin-top: 32px;
 }
 
 .tasklist-tarefa button {
-  border:none;
+  border: none;
   background: transparent;
   font-size: 18px;
 }
 
 .tasklist-tarefa .btnação {
   display: flex;
-  gap:8px;
+  gap: 8px;
 }
 
+.btnação button {
+  cursor: pointer;
+}
 
 .tasklist-tarefa.completa span {
   font-size: 18px;
@@ -33,7 +35,6 @@
 .tasklist-tarefa.completa button {
   border: none;
   background: transparent;
-  font-size:18px;
+  font-size: 18px;
   padding: 21px 21px;
 }
-
