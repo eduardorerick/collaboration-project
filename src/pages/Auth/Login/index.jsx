@@ -29,7 +29,7 @@ export function Login() {
 					htmlFor="USER_EMAIL"
 				/>
 				<CustomInput
-					type="text"
+					type="password"
 					value={password}
 					onChange={(evt) => setPassword(evt.target.value)}
 					placeholder={'Insira a senha aqui'}

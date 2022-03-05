@@ -11,6 +11,7 @@ export function CustomInput({ label, type = 'text', value, onChange, placeholder
 		>
 			<label htmlFor={htmlFor}>{label}</label>
 			<input
+				id={htmlFor}
 				type={type}
 				value={value}
 				onChange={onChange}

@@ -26,6 +26,7 @@ export function Signup() {
 			<div className="signup-div-input">
 				<input
 					value={email}
+					id='USER_EMAIL'
 					onChange={(evt) => setEmail(evt.target.value)}
 					className="signup-input"
 					type="email"
@@ -36,6 +37,7 @@ export function Signup() {
 			<div className="signup-div-input">
 				<input
 					value={pass}
+					id='USER_PASSWORD'
 					onChange={(evt) => setPass(evt.target.value)}
 					className="signup-input"
 					type={isPasswordVisible ? 'text' : 'password'}
