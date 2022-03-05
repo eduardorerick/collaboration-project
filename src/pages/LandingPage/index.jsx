@@ -1,7 +1,6 @@
 import { Template } from '../../components/Template';
 import './style.scss';
 import { Link } from 'react-router-dom';
-import HeroImage from '../../assets/landingPageImg.svg';
 import LogoCp from '../../assets/logocp.svg';
 import Landingimage from '../../assets/landingimage.png';
 export function LandingPage() {
