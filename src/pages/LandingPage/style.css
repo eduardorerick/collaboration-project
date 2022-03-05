@@ -1,39 +1,59 @@
+
 .landing-section {
-	height: 90vh;
+	min-height: 100vh;
+	background-color:#292C3F;
+	color: white;
 }
 .landing-navbar {
-	margin-top: 20px;
+	height: 104px;
+	padding-top: 29px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.landing-nav-buttons-div {
+.landing-navbar img {
+width: 147px;
+}
+
+.landing-nav-buttons-div { 
 	display: flex;
 	gap: 20px;
 }
-
 .landing-page-div {
+	margin:auto;
+	/* margin-left: 466px;
+	margin-right: 487px; */
+	width: 507.28px;
+	height: 309.01px;
 	display: flex;
-	width: 100%;
-	margin-top: 100px;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	
 }
 
-.landing-text-div {
-	flex: 2;
-}
 .landing-text-div p {
-	padding-top: 12px;
+	margin-top: 41px;
 	font-weight: 300;
 	font-size: 21px;
-	color: #7d7987;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 41px;
+	
 }
 
 .landing-text-div h1 {
+	height: 180,98px;
+	width: 487px;
 	font-size: 48px;
+	text-align: center;
+
+	
+
+	 
 }
 
-.landing-image-div {
-	flex: 2;
+.landing-image {
+	width: 751px;
+	height: 502px;
+	margin: auto;
 }
