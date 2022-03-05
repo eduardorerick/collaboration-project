@@ -1,24 +1,75 @@
-import { TaskBox } from '../../../components/TaskBox';
-import './style.css';
+import { CircularProgress } from "@mui/material";
+import { useState } from "react";
+import { TaskBox } from "../../../components/TaskBox";
+import {
+  useUpdateUserCollection,
+  useCreateNewTask,
+  useUserCollection,
+} from "../../../services/firebase/firebase";
+import "./style.css";
 
 export function TaskList() {
-	return (
-		<section className="tasklist-conteudo">
-			<div>
-				<h1>Adicionar novas tarefas</h1>
-				<div className="tasklist-novatarefa">
-					<input type="text" id="Nova tarefa" placeholder="Adicionar tarefa..." />
-					<button>+</button>
-				</div>
-				<div>
-					<TaskBox title="Teste 2" />
-				</div>
-			</div>
+  const [taskTitle, setTaskTitle] = useState("");
+  const [value, loading, error] = useUserCollection();
+  const updateTask = useUpdateUserCollection();
 
-			<div className="tasklist-tarefaconcluida">
-				<h1>Tarefas completas</h1>
-				<TaskBox title="Teste" isCompleted />
-			</div>
-		</section>
-	);
+  const createNewTask = useCreateNewTask();
+
+  async function handleCompleteTask(title) {
+    try {
+      await updateTask(title);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function handleNewTask() {
+    try {
+      createNewTask(taskTitle);
+      setTaskTitle("");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  return (
+    <section className="tasklist-conteudo">
+      <div>
+        <h1>Adicionar novas tarefas</h1>
+        <div className="tasklist-novatarefa">
+          <input
+            type="text"
+            id="Nova tarefa"
+            placeholder="Adicionar tarefa..."
+            value={taskTitle}
+            onChange={(evt) => setTaskTitle(evt.target.value)}
+          />
+          <button onClick={handleNewTask}>+</button>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          {loading && <CircularProgress sx={{ width: "100%", mt: 3 }} />}
+          {value &&
+            value
+              .filter(({ isCompleted }) => !isCompleted)
+              .map((task, idx) => (
+                <TaskBox
+                  key={idx}
+                  title={task.title}
+                  handleComplete={() => handleCompleteTask(task.title)}
+                />
+              ))}
+        </div>
+      </div>
+
+      <div className="tasklist-tarefaconcluida">
+        <h1>Tarefas completas</h1>
+        {value &&
+          value
+            .filter(({ isCompleted }) => isCompleted)
+            .map((task, idx) => (
+              <TaskBox key={idx} title={task.title} isCompleted />
+            ))}
+      </div>
+    </section>
+  );
 }
