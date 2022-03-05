@@ -1,5 +1,5 @@
 import { Template } from '../../components/Template';
-import './style.css';
+import './style.scss';
 import { Link } from 'react-router-dom';
 import HeroImage from '../../assets/landingPageImg.svg';
 import LogoCp from '../../assets/logocp.svg';
@@ -27,7 +27,7 @@ export function LandingPage() {
 					</div>
 				</div>
 			<div className='landing-image'>
-			<img src ={Landingimage} alt='landing-image'/>
+				<img src ={Landingimage} alt='landing-image'/>
 			</div>
 					
 			</Template>

@@ -1,5 +1,5 @@
 import { TaskBox } from '../../../components/TaskBox';
-import './style.css';
+import './style.scss';
 
 export function TaskList() {
 	return (
