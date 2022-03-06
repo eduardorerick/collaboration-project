@@ -12,7 +12,7 @@ import {
 
 export function TaskList() {
   const [taskTitle, setTaskTitle] = useState("");
-  const [value, loading, error] = useUserCollection();
+  const [value, loading] = useUserCollection();
   const updateTask = useUpdateUserCollection();
 
   const createNewTask = useCreateNewTask();

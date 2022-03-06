@@ -9,7 +9,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import DoneIcon from '@mui/icons-material/Done';
 
 export function Portal() {
-	const { user } = useAuth();
 	const signOut = useSignOut();
 
 	return (
@@ -19,7 +18,7 @@ export function Portal() {
 			<div className='portal-menu'>
 			<h2>Tarefas</h2>
 			<h2>Profile</h2>
-			<h2>LogOut</h2>
+			<h2 onClick={() => signOut()}>LogOut</h2>
 			</div>
 		</div>
 		<div className='portal-page'>

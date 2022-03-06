@@ -6,7 +6,6 @@ import { Signup } from "../pages/Auth/Signup";
 import { TaskList } from "../pages/Portal/TaskList";
 import { Profile } from "../pages/Portal/Profile";
 import { Portal } from "../pages/Portal";
-import { Playground } from "../pages/Playground";
 import { CanSee } from "../components/CanSee";
 import React from "react";
 import { IsLogged } from "../components/isLogged";
@@ -28,7 +27,6 @@ export function Routes() {
           <Route path="login" exact element={<Login />} />
           <Route path="signup" exact element={<Signup />} />
         </Route>
-        <Route path="playground" exact element={<Playground />} />
         <Route
           path="/portal"
           exact

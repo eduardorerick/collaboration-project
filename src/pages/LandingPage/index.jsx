@@ -26,7 +26,7 @@ export function LandingPage() {
 					</div>
 				</div>
 			<div className='landing-image'>
-				<img src ={Landingimage} alt='landing-image'/>
+				<img src ={Landingimage} alt='Landing Page'/>
 			</div>
 					
 			</Template>
