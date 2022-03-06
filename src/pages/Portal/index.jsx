@@ -1,4 +1,3 @@
-import { useAuth } from '../../context/Auth';
 import { useSignOut } from '../../services/firebase/firebase';
 import './style.scss';
 import avatar from './imgs/avatar.png';
