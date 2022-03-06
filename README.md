@@ -43,4 +43,7 @@ Run `npm run cy:open` to open the Cypress Test Runner to run tests in interactiv
 
 ---
 
-Made with ❤️ by [Eduardo Rerick](https://github.com/eduardorerick) [Rodrigo Richell](https://github.com/RRichellFA) and [Itair Filho](https://github.com/ItairFilho).
+Made with ❤️ by: \
+[Eduardo Rerick](https://github.com/eduardorerick) \
+[Rodrigo Richell](https://github.com/RRichellFA) \
+[Itair Filho](https://github.com/ItairFilho). 
