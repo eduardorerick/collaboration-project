@@ -4,50 +4,46 @@
 	margin-top: 80px;
 	display: flex;
 	justify-content: space-between;
-}
-.tasklist-conteudo h1 {
-	margin-bottom: 32px;
-	font-size: 34px;
+
+h1 {
+    margin-bottom: 32px;
+    font-size: 34px;
     line-height: 41px;
-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
+    }  
 }
 
 .tasklist-novatarefa {
     display: flex;
-     align-items: center;
-    
+    align-items: center;
 
-
-}
-.tasklist-novatarefa input {
+input {
     width: 300px;
     height: 64px;
     border: 1px solid #0059F1;
     border-radius: 6px;
-padding: 0 30px;
+    padding: 0 30px;
+    font-size:14px;
+    }
 
-font-size:14px;
-
-}
-.tasklist-novatarefa button {
+button {
     font-size: 32px;
     background-color: #FFFFFF;
     width: 64px;
     height: 64px;
-    
     border: 1px solid #0059F1;
     border-radius: 5px;
     margin-left: 4px;
     color:#0059F1;
+    }
 }
 
 .tasklist-tarefaconcluida {
     margin-bottom: 32px;
 	font-size: 34px;
     line-height: 41px;
-
-
 }
+
 .tasklist-titulo {
     display: flex;
     flex-direction: row;
@@ -60,6 +56,6 @@ font-size:14px;
     padding: 22px 20px;
     border:1px solid #0059F1;
     border-radius: 5px;
-
-    
 }
+
+
