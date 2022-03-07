@@ -10,7 +10,7 @@ export function Login() {
 
   function handleLogin() {
     try {
-      userLogin(email, password, "/portal/profile");
+      userLogin(email, password, "/portal/tasklist");
     } catch (err) {
       console.log(err);
     }

@@ -1,61 +1,59 @@
 .tasklist-conteudo {
 	width: 790px;
 	margin: auto;
-	margin-top: 80px;
+	padding-top: 20px;
 	display: flex;
 	justify-content: space-between;
 
-h1 {
-    margin-bottom: 32px;
-    font-size: 34px;
-    line-height: 41px;
-    letter-spacing: -0.02em;
-    }  
+	h1 {
+		margin-bottom: 32px;
+		font-size: 34px;
+		line-height: 41px;
+		letter-spacing: -0.02em;
+	}
 }
 
 .tasklist-novatarefa {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
-input {
-    width: 300px;
-    height: 64px;
-    border: 1px solid #0059F1;
-    border-radius: 6px;
-    padding: 0 30px;
-    font-size:14px;
-    }
+	input {
+		width: 300px;
+		height: 64px;
+		border: 1px solid #0059f1;
+		border-radius: 6px;
+		padding: 0 30px;
+		font-size: 14px;
+	}
 
-button {
-    font-size: 32px;
-    background-color: #FFFFFF;
-    width: 64px;
-    height: 64px;
-    border: 1px solid #0059F1;
-    border-radius: 5px;
-    margin-left: 4px;
-    color:#0059F1;
-    }
+	button {
+		font-size: 32px;
+		background-color: #ffffff;
+		width: 64px;
+		height: 64px;
+		border: 1px solid #0059f1;
+		border-radius: 5px;
+		margin-left: 4px;
+		color: #0059f1;
+	}
 }
 
 .tasklist-tarefaconcluida {
-    margin-bottom: 32px;
+	margin-bottom: 32px;
 	font-size: 34px;
-    line-height: 41px;
+	line-height: 41px;
 }
 
 .tasklist-titulo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 368px;
-    height: 58px;
-    background-color: #FFFFFF;
-    color:#0059F1;
-    padding: 22px 20px;
-    border:1px solid #0059F1;
-    border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 368px;
+	height: 58px;
+	background-color: #ffffff;
+	color: #0059f1;
+	padding: 22px 20px;
+	border: 1px solid #0059f1;
+	border-radius: 5px;
 }
-
-
